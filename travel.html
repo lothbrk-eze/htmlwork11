@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIWORLD - Book Flights in Kenya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 30px;
+        }
+        .flight-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+        }
+        .flight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .flight-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price-tag {
+            font-size: 1.2rem;
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .search-box {
+            background-color: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><b><i class="fas fa-plane"></i> AVIWORLD</b></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="travel.html" class="nav-link active">Travel</a>
+                    <a href="adventure and exploring.html" class="nav-link active">Adventure</a>
+                    <a href="defense.html" class="nav-link active">Defense</a>
+                    <a href="purchase a plane.html" class="nav-link active">Plane Sale</a>
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                    <a href="faqs.html" class="nav-link active">Help</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2"><i class="fas fa-user"></i> Login</button>
+                    <button class="btn btn-light"><i class="fas fa-user-plus"></i> Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Explore Kenya & Beyond</h1>
+            <p class="lead">Book your flights to domestic and international destinations at the best prices</p>
+            
+            <!-- Search Box -->
+            <div class="search-box mt-4">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">From</label>
+                        <select class="form-select">
+                            <option selected>Select Origin</option>
+                            <option>Nairobi (NBO)</option>
+                            <option>Mombasa (MBA)</option>
+                            <option>Kisumu (KIS)</option>
+                            <option>Eldoret (EDL)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">To</label>
+                        <select class="form-select">
+                            <option selected>Select Destination</option>
+                            <option>Mombasa (MBA)</option>
+                            <option>Nairobi (NBO)</option>
+                            <option>Kisumu (KIS)</option>
+                            <option>Eldoret (EDL)</option>
+                            <option>Diani (DIU)</option>
+                            <option>Malindi (MYD)</option>
+                            <option>Lamu (LAU)</option>
+                            <option>Dar es Salaam (DAR)</option>
+                            <option>Kigali (KGL)</option>
+                            <option>Dubai (DXB)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Departure</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Return</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button class="btn btn-primary w-100"><i class="fas fa-search"></i> Search Flights</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <div class="container">
+        <h2 class="text-center mb-4">Popular Domestic Routes</h2>
+        <div class="row">
+            <!-- Domestic Flights -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Mombasa">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Mombasa (MBA)</h5>
+                        <p class="card-text">Daily flights with multiple carriers</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 12,500</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Mombasa to Nairobi">
+                    <div class="card-body">
+                        <h5 class="card-title">Mombasa (MBA) → Nairobi (NBO)</h5>
+                        <p class="card-text">Morning and evening flights available</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 12,500</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Kisumu">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Kisumu (KIS)</h5>
+                        <p class="card-text">Direct flights with Kenya Airways</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 9,800</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Eldoret">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Eldoret (EDL)</h5>
+                        <p class="card-text">Multiple daily connections</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 10,200</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More domestic destinations -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Diani">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Diani (DIU)</h5>
+                        <p class="card-text">Direct flights to the beach paradise</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 15,300</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Malindi">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Malindi (MYD)</h5>
+                        <p class="card-text">Coastal gateway flights</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 14,800</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Lamu">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Lamu (LAU)</h5>
+                        <p class="card-text">Experience Swahili culture</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 18,500</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Mombasa to Kisumu">
+                    <div class="card-body">
+                        <h5 class="card-title">Mombasa (MBA) → Kisumu (KIS)</h5>
+                        <p class="card-text">Coast to lakeside flights</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 16,295</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="text-center mt-5 mb-4">Regional & International Destinations</h2>
+        <div class="row">
+            <!-- Regional/International Flights -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Dar es Salaam">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Dar es Salaam (DAR)</h5>
+                        <p class="card-text">Multiple daily flights</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 42,295</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Kigali">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Kigali (KGL)</h5>
+                        <p class="card-text">East African connection</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 70,385</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Johannesburg">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Johannesburg (JNB)</h5>
+                        <p class="card-text">Southern Africa gateway</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 65,750</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Addis Ababa">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Addis Ababa (ADD)</h5>
+                        <p class="card-text">African Union hub</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 58,900</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More international destinations -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Dubai">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Dubai (DXB)</h5>
+                        <p class="card-text">Middle East connection</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 85,500</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to London">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → London (LHR)</h5>
+                        <p class="card-text">Direct flights available</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 100,045</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to New York">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → New York (JFK)</h5>
+                        <p class="card-text">Transatlantic connection</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 165,845</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-3">
+                <div class="card flight-card h-100">
+                    <img src="https://images.unsplash.com/photo-1581434681384-9d5d7a2f2d6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top flight-img" alt="Nairobi to Mumbai">
+                    <div class="card-body">
+                        <h5 class="card-title">Nairobi (NBO) → Mumbai (BOM)</h5>
+                        <p class="card-text">Asian business hub</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">Ksh 92,300</span>
+                            <button class="btn btn-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-light mt-5 py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Why Book With AVIWORLD?</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h4>Secure Booking</h4>
+                        <p>Your transactions are 100% secure with our encrypted payment system</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4">
+                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Our customer service team is available round the clock to assist you</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4">
+                        <i class="fas fa-tag fa-3x text-primary mb-3"></i>
+                        <h4>Best Prices</h4>
+                        <p>We guarantee the best prices for all our flight routes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest deals and flight offers directly to your inbox</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="row g-2">
+                        <div class="col-8">
+                            <input type="email" class="form-control" placeholder="Your email address">
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-light w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>AVIWORLD</h5>
+                    <p>Your trusted partner for flight bookings and aviation services in Kenya and beyond.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Flights</a></li>
+                        <li><a href="#" class="text-white">Destinations</a></li>
+                        <li><a href="#" class="text-white">Special Offers</a></li>
+                        <li><a href="#" class="text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">Booking Help</a></li>
+                        <li><a href="#" class="text-white">Cancellation Policy</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone me-2"></i> +254 700 123456</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@aviworld.co.ke</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center pt-3">
+                <p class="mb-0">&copy; 2023 AVIWORLD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
