@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIWORLD - Aviation Services</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/bootstrap.js"></script>
+
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/bgrr.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-item img {
+            object-fit: cover;
+            height: 500px;
+        }
+        
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: #17a2b8;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-booking {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            border: none;
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-booking:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><i class="fas fa-plane me-2"></i><b>AVIWORLD</b></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarcollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="travel.html" class="nav-link">Travel</a>
+                    <a href="defense.html" class="nav-link">Defense</a>
+                    <a href="purchase a plane.html" class="nav-link">Plane Sale</a>
+                    <a href="adventure and exploring.html" class="nav-link">Adventure</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="faqs.html" class="nav-link">Help</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Welcome to AVIWORLD</h1>
+            <p class="lead mb-5">Your gateway to the skies - Travel, Adventure, and Aviation Excellence</p>
+            <a href="#travel" class="btn btn-info btn-lg px-4 me-2">Explore Flights</a>
+            <a href="#adventure" class="btn btn-outline-light btn-lg px-4">Discover Adventures</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/jkia4.jpg" alt="Aviation" class="img-fluid rounded shadow hover-zoom">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About Aviation World</h2>
+                    <p class="lead">The aviation sector is an exciting and interesting field that connects the world.</p>
+                    <p>Through the intelligent work of aviation pioneers like the Wright brothers, Victor Tatin, Alberto Santos-Dumont, and E. Lillian Todd, the first aircraft were invented between the late 1800s and early 1900s. The aviation sector has undergone enormous improvement due to gradual technological advancements, leading to modern airplanes, aircraft, and fighter jets.</p>
+                    <a href="#" class="btn btn-info mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <section class="mb-5">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/advert5.jpeg" class="d-block w-100" alt="Flight Offers">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>New International Flight Offers</h5>
+                        <p>Special deals to New York, London, and Dubai</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/advert tour.jpg" class="d-block w-100" alt="Sky Diving">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Sky Diving Adventure</h5>
+                        <p>50% off on sky diving tours to Diani Beach</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/firefight.jpg" class="d-block w-100" alt="Emergency Help">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Emergency Support</h5>
+                        <p>Get instant help by signing up with us</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/advert6.jpeg" class="d-block w-100" alt="Jet Purchase">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Jet Purchase Special</h5>
+                        <p>25% off with free shipment to Mombasa Airport</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section id="travel" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Flight Destinations</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/jkia4.jpg" class="card-img-top" alt="Nairobi to Mombasa">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Nairobi (NBI) to Mombasa (MSA)</h5>
+                            <p class="card-text">Quick and comfortable flights between Kenya's major cities</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Ksh 17,075</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/kq.jpg" class="card-img-top" alt="Mombasa to Nairobi">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Mombasa (MSA) to Nairobi (NBI)</h5>
+                            <p class="card-text">Return flights with excellent service</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Ksh 17,075</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/eldoret.jpg" class="card-img-top" alt="Mombasa to Kisumu">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Mombasa (MSA) to Kisumu (KIS)</h5>
+                            <p class="card-text">Direct flights to Kenya's lakeside city</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 16,295</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/kisumu.jpg" class="card-img-top" alt="Kisumu to Mombasa">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Kisumu (KIS) to Mombasa (MSA)</h5>
+                            <p class="card-text">Return flights with beautiful views</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 16,295</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/dar es.jpg" class="card-img-top" alt="Nairobi to Dar es Salaam">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Nairobi (NBI) to Dar es Salaam (DES)</h5>
+                            <p class="card-text">Regional flights to Tanzania</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 42,295</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/kigali.jpg" class="card-img-top" alt="Nairobi to Kigali">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Nairobi (NBI) to Kigali (KGL)</h5>
+                            <p class="card-text">Flights to Rwanda's capital</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 70,385</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/london.jpg" class="card-img-top" alt="Nairobi to London">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Nairobi (NBI) to London (LDN)</h5>
+                            <p class="card-text">International flights to the UK</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 100,045</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/new york.jpeg" class="card-img-top" alt="Nairobi to New York">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Nairobi to New York</h5>
+                            <p class="card-text">Transatlantic flights to the USA</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 165,845</span>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Section -->
+    <section id="adventure" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Aviation Adventures</h2>
+            <p class="text-center mb-5">Experience Kenya from the skies with our unique aviation adventures</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/maasai mara3.jpg" class="card-img-top" alt="Maasai Mara">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Maasai Mara Aerial Safari</h5>
+                            <p class="card-text">Tourists boarding a plane to view the Maasai Mara game reserve from above</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 200,000</span>
+                                <button class="btn btn-booking">Book Tour</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/amazing view.jpg" class="card-img-top" alt="Amboseli">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Amboseli National Park Tour</h5>
+                            <p class="card-text">A plane to carry tourists over Amboseli with views of Kilimanjaro</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 250,000</span>
+                                <button class="btn btn-booking">Book Tour</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/skydiving-kenya-10.jpg" class="card-img-top" alt="Skydiving">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Diani Beach Skydiving</h5>
+                            <p class="card-text">Experience the thrill of skydiving over Kenya's beautiful coastline</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 180,000</span>
+                                <button class="btn btn-booking">Book Tour</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/divers.jpg" class="card-img-top" alt="Skydivers">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Professional Skydiving</h5>
+                            <p class="card-text">Join our professional skydiving team for an unforgettable experience</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">KSH 180,000</span>
+                                <button class="btn btn-booking">Book Tour</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defense Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Aviation Defense Systems</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/kenya n15.webp" class="card-img-top" alt="Kenya N15">
+                        <div class="card-body">
+                            <h5 class="card-title">Fighter Jet N15</h5>
+                            <p class="card-text">Kenya's advanced fighter jet with a bomb capacity of 25 rocket bombs, accommodating one pilot and 30 live grenades. Provides support in war zones through mass enemy elimination.</p>
+                            <p class="card-text"><small class="text-muted">Kenya's defense system deters any external attacks by possessing such powerful machines.</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/helicopter.jpg" class="card-img-top" alt="Bell AH-1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bell AH-1 Attack Helicopter</h5>
+                            <p class="card-text">Kenya's attack helicopter designed to transport soldiers to war zones while providing support through bombing capabilities and supply transportation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/Sukhoi Su-34.jpg" class="card-img-top" alt="Sukhoi Su-34">
+                        <div class="card-body">
+                            <h5 class="card-title">Sukhoi Su-34</h5>
+                            <p class="card-text">Russia's advanced fighter bomber built for mass destruction. The Russian air force is second to none in the entire world.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <img src="images/F-15E Strike Eagle.webp" class="card-img-top" alt="F-15E Strike Eagle">
+                        <div class="card-body">
+                            <h5 class="card-title">F-15E Strike Eagle</h5>
+                            <p class="card-text">The US's modern tactical fighter jet designed for precision bombing in war zones with advanced targeting systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rescue Operations -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Rescue & Emergency Operations</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0"><i class="fas fa-fire me-2"></i>Fire Fighting</h5>
+                        </div>
+                        <img src="images/firefight.jpg" class="card-img-top" alt="Fire Fighting">
+                        <div class="card-body">
+                            <p class="card-text">Helicopter dropping water to extinguish forest fires. Our aerial firefighting teams are ready to respond to emergencies.</p>
+                            <p class="text-success"><strong>In case of emergency due to mass fire, contact us by clicking below. You will receive help in less than five minutes.</strong></p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-danger w-100">Emergency Help <i class="fas fa-phone ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-water me-2"></i>Flood Rescuing</h5>
+                        </div>
+                        <img src="images/recue2.jpeg" class="card-img-top" alt="Flood Rescue">
+                        <div class="card-body">
+                            <p class="card-text">Helicopter preparing to evacuate people from flooded areas. We provide support to government rescue teams during flood calamities.</p>
+                            <p class="text-warning"><strong>Our teams are trained for swift water rescues and emergency evacuations.</strong></p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-primary w-100">Request Assistance <i class="fas fa-life-ring ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="fas fa-utensils me-2"></i>Food Supply</h5>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <img src="images/foodspply2.jpg" class="img-fluid h-100" style="object-fit: cover;" alt="Food Supply">
+                            </div>
+                            <div class="col-6">
+                                <img src="images/foodsply.jpg" class="img-fluid h-100" style="object-fit: cover;" alt="Food Supply">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Aircraft supplying food from Europe to drought-stricken areas in Africa. The aviation sector enables fast and reliable humanitarian aid worldwide.</p>
+                            <p class="text-info"><strong>We partner with international organizations for rapid disaster response.</strong></p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-success w-100">Support Relief <i class="fas fa-hands-helping ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Are there discounts on flight prices?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <strong>Discounts are offered once you sign up with us</strong> and after you take at least eight flights. If you're not satisfied you can contact us for clarification.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            What safety measures do you have in place?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            All our flights adhere to strict international aviation safety standards. Our aircraft undergo regular maintenance and our crew receives continuous training.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            How can I track my flight?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can track your flight in real-time through our mobile app or website using your booking reference number. We also send SMS updates for any schedule changes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-info text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+                    <p class="lead mb-5">Stay updated with our latest flight deals, adventure packages, and aviation news.</p>
+                    
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your Email Address">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-dark btn-lg w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4><i class="fas fa-plane me-2"></i>AVIWORLD</h4>
+                    <p>We are a company aiming to improve services offered by the aviation sector. We offer flight booking, plane sales, tour ticket booking, and showroom services.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Flight Booking</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Adventure Tours</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Defense Systems</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h4>Contact Information</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +254 700 000000</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@aviworld.com</li>
+                    </ul>
+                    
+                    <h5 class="mt-4">Payment Methods</h5>
+                    <div>
+                        <img src="https://via.placeholder.com/40" alt="Visa" class="me-2">
+                        <img src="https://via.placeholder.com/40" alt="Mastercard" class="me-2">
+                        <img src="https://via.placeholder.com/40" alt="M-Pesa" class="me-2">
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="mt-4 bg-light">
+            
+            <div class="text-center pt-3">
+                <p class="mb-0">Developed by Kiprop &copy; 2025 AVIWORLD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-info btn-lg position-fixed bottom-0 end-0 m-3 rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>
